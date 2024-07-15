@@ -1,6 +1,13 @@
 import React from "react";
 
 export default function Header() {
+  const handleLoginClick = () => {
+    window.location.href = 'http://localhost:7000/login';
+  };
+  const handleSignUpClick = () => {
+    window.location.href = 'http://localhost:7000/signup';
+  };
+
   return (
     <>
       <div>
@@ -63,10 +70,16 @@ export default function Header() {
               </form>
 
               <div className="text-end">
-                <button type="button" className="btn btn-outline-light me-2">
+                <button type="button"
+                  className="btn btn-outline-light me-2"
+                  onClick={handleLoginClick}>
                   Login
                 </button>
-                <button type="button" className="btn btn-warning">
+                <button
+                  type="button"
+                  className="btn btn-warning"
+                  onClick={handleSignUpClick}
+                >
                   Sign-up
                 </button>
               </div>

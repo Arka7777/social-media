@@ -1,0 +1,35 @@
+// var recipeArray;
+
+// async function fetchRecipes() {
+//     try {
+//         const response = await axios.get("https://api.spoonacular.com/recipes/complexSearch", {
+//             params: {
+//                 query: 'pasta',
+//                 apiKey: '491588443ce04df9a951a480447ba28c'
+//             },
+//             timeout: 10000  Timeout in milliseconds
+//         });
+//         recipeArray = response.data.results;
+
+//         console.log(recipeArray)
+
+//         for (let i = 0; i < recipeArray.length; i++) {
+//             const recipe = JSON.stringify(recipeArray[i]);
+//             fs.appendFile('./recipeApi.js', recipe + ',' + '\n', (err) => {
+//                 if (err) throw err;
+//                 console.log(`Appended: ${recipe}`);
+//             });
+//         }
+//     } catch (error) {
+//         console.error('There has been a problem with your fetch operation:', error.message);
+//     }
+// }
+
+//HTTP SERVER:
+// http.createServer(async (req, res) => {
+//     res.write("fetching data ....");
+
+//     await fetchRecipes();
+
+//     res.end();
+// }).listen(8000, () => { console.log('The server is listening upon port 8000') })
